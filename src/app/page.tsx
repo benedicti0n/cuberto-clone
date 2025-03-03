@@ -8,6 +8,8 @@ import WhatWeDo from "@/components/LandingPage/WhatWeDo";
 import FeaturedProjects from "@/components/LandingPage/FeaturedProjects";
 import OurPhilosophy from "@/components/LandingPage/OurPhilosophy";
 import Resources from "@/components/LandingPage/Resources";
+import UiProjectSection from "@/components/LandingPage/UiProjectSection";
+import Socials from "@/components/LandingPage/Socials";
 
 export default function Home() {
 
@@ -22,6 +24,8 @@ export default function Home() {
       <FeaturedProjects />
       <OurPhilosophy />
       <Resources />
+      <UiProjectSection />
+      <Socials />
       {/* <Cursor stickyElement={stickyElement} /> */}
     </div>
   );

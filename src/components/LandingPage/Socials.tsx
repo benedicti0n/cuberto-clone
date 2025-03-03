@@ -1,7 +1,7 @@
 import React from 'react'
 import { VelocityScroll } from '../magicui/scroll-based-velocity'
 import CircularPing from '../ui/CircularPing'
-import { ArrowBigUp, ArrowUp, ArrowUp01, ArrowUpRight, Instagram, Link } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import SocialLinkRibbon from './SocialLinkRibbon'
 import { TextAnimate } from '../magicui/text-animate'
 import Button from '../ui/Button'
@@ -34,20 +34,35 @@ const Socials = () => {
                 })}
             </div>
 
-            <div className="w-full px-20 flex relative z-10 bg-black py-6">
-                <div className="w-1/2 flex flex-col">
+            <div className="w-full px-20 flex relative z-10 bg-black py-24">
+                <div className="w-1/2 flex flex-col text-light-regular">
+                    <div className='flex items-center gap-4'>
+                        <TextAnimate className="text-white text-xs items-center uppercase">
+                            Main Office
+                        </TextAnimate>
+                        <TextAnimate className="text-white text-2xl">
+                            901 N Pitt Street
+                        </TextAnimate>
+                    </div>
                     <TextAnimate className="text-white text-2xl">
-                        Main office901 N Pitt Street
                         Alexandria VA, 22314
                     </TextAnimate>
-                    <Button>Info@cuberto.com</Button>
+                    <Button className='border-1 border-white rounded-4xl w-fit text-white uppercase p-4 text-2xl mt-8'>Info@cuberto.com</Button>
                 </div>
-                <div className="w-1/2 flex flex-col">
+
+                <div className="w-1/2 flex flex-col text-light-regular">
+                    <div className='flex items-center gap-4'>
+                        <TextAnimate className="text-white text-xs items-center uppercase">
+                            Second Office
+                        </TextAnimate>
+                        <TextAnimate className="text-white text-2xl">
+                            901 N Pitt Street
+                        </TextAnimate>
+                    </div>
                     <TextAnimate className="text-white text-2xl">
-                        Second officeNa Perstyne
                         342/1, 11000 Prague
                     </TextAnimate>
-                    <Button>+1 301 549 9309</Button>
+                    <Button className='border-1 border-white rounded-4xl w-fit text-white uppercase p-4 text-2xl mt-8'>+1 301 549 9309</Button>
                 </div>
             </div>
         </div>
