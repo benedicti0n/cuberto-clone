@@ -4,13 +4,18 @@ import * as motion from "motion/react-client"
 
 const Landingpage = () => {
     return (
-        <div className='h-9/10 w-full border-2 flex flex-col relative'>
+        <div className='h-[90vh] w-full border-2 flex flex-col relative'>
             <div className='flex justify-between items-center pt-6 w-full px-12'>
                 <h1 className='text-2xl'>cuberto</h1>
                 <h1 className='font-light-regular text-base pr-13'>menu</h1>
             </div>
-            <div className='border-2 border-black h-full mx-40 my-20 flex flex-col justify-center text-9xl'>
-                <TextAnimate animation="slideUp" by="word" className='font-regular' >
+            <div className='h-full mx-40 my-20 flex flex-col justify-center text-8xl'>
+                <TextAnimate
+                    animation="slideUp"
+                    by="word"
+                    className='font-regular'
+                    style={{ animationDelay: "0s" }} // Start immediately
+                >
                     We are a digital
                 </TextAnimate>
 
@@ -23,16 +28,29 @@ const Landingpage = () => {
                             scale: { type: "spring", visualDuration: 1, bounce: 0 },
                         }}
                     >
-                        <video src="/assets/header.mp4" autoPlay loop className='rounded-full h-32' />
+                        <video src="/assets/header.mp4" autoPlay muted loop className='rounded-full h-28' />
                     </motion.div>
-                    <TextAnimate animation="slideUp" by="word" className='font-light-italic'>
+                    <TextAnimate
+                        animation="slideUp"
+                        by="word"
+                        className='font-light-italic'
+                        delay={0.3}
+                    >
                         design
                     </TextAnimate>
-                    <TextAnimate animation="slideUp" by="word">
+                    <TextAnimate
+                        animation="slideUp"
+                        by="word"
+                        delay={0.6}
+                    >
                         and
                     </TextAnimate>
                 </div>
-                <TextAnimate animation="slideUp" by="word">
+                <TextAnimate
+                    animation="slideUp"
+                    by="word"
+                    delay={0.9}
+                >
                     motion agency
                 </TextAnimate>
             </div>

@@ -16,7 +16,7 @@ export default function Home() {
   const stickyElement = useRef(null);
 
   return (
-    <div className="w-full">
+    <div className="w-full min-h-screen">
       <NavHeader ref={stickyElement} />
       <Landingpage />
       <ShortPromo />
