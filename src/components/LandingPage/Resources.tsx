@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { TextAnimate } from '../magicui/text-animate'
 import { CardLink } from '../ui/CardLink'
 import * as motion from "motion/react-client"
@@ -14,8 +14,37 @@ const cards = [
 ]
 
 const Resources = () => {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const cardsContainerRef = useRef<HTMLDivElement>(null);
+    const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 });
+
+    // Calculate drag constraints based on content and container width
+    useEffect(() => {
+        const calculateConstraints = () => {
+            if (containerRef.current && cardsContainerRef.current) {
+                const containerWidth = containerRef.current.clientWidth;
+                const cardsWidth = cardsContainerRef.current.scrollWidth;
+
+                // Only allow dragging if content is wider than container
+                const leftConstraint = containerWidth - cardsWidth;
+
+                setDragConstraints({
+                    left: Math.min(leftConstraint, 0), // Negative value, but never positive
+                    right: 0 // Right constraint is always 0
+                });
+            }
+        };
+
+        // Calculate on mount
+        calculateConstraints();
+
+        // Recalculate on window resize
+        window.addEventListener('resize', calculateConstraints);
+        return () => window.removeEventListener('resize', calculateConstraints);
+    }, [cards]); // Recalculate when cards array changes
+
     return (
-        <div className='min-h-screen bg-black/90 rounded-t-[5rem]  relative -top-40'>
+        <div className='min-h-screen bg-black/90 rounded-t-[5rem] relative -top-40'>
             {/* Animated Title */}
             <div className='text-9xl flex flex-col leading-28 tracking-tighter text-white px-40 pt-56 pb-40'>
                 <TextAnimate by="word" animation='slideUp' className='font-regular top-0 relative'>
@@ -30,13 +59,14 @@ const Resources = () => {
             </div>
 
             {/* Draggable Cards Section */}
-            <div className='overflow-hidden '>
+            <div className='overflow-hidden' ref={containerRef}>
                 <motion.div
                     className="flex gap-10 cursor-grab active:cursor-grabbing pl-40"
                     drag="x"
                     transition={{ stiffness: 30, damping: 30, ease: "easeInOut" }}
-                    dragConstraints={{ left: -1000, right: 0 }}
+                    dragConstraints={dragConstraints}
                     whileTap={{ cursor: "grabbing" }}
+                    ref={cardsContainerRef}
                 >
                     {cards.map((card, index) => (
                         <motion.div
@@ -59,7 +89,6 @@ const Resources = () => {
                     </Button>
                 </div>
             </div>
-
         </div>
     )
 }

@@ -1,4 +1,3 @@
-import { redirect } from 'next/navigation';
 import React, { ReactNode } from 'react'
 import { motion } from 'framer-motion';
 
@@ -14,7 +13,6 @@ export const CardLink = ({ imageUrl, href, title, icon }: ICardLink) => {
         <div className='flex flex-col gap-6 aspect-video w-120 rounded-4xl'>
             <motion.div
                 className='flex flex-col gap-6'
-                onClick={() => redirect(href)}
                 whileHover={{ scale: 0.98 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
             >
@@ -34,7 +32,6 @@ export const CardLink1 = ({ imageUrl, href, title, icon }: ICardLink) => {
         <div className='flex flex-col gap-4 w-76'>
             <motion.div
                 className='flex flex-col'
-                onClick={() => redirect(href)}
                 whileHover={{ scale: 0.98 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
             >
