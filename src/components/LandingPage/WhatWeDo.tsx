@@ -1,5 +1,4 @@
 import React from 'react'
-import FlipText from '../FlipText'
 import Button from '../ui/Button'
 
 const WhatWeDo = () => {
