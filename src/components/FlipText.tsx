@@ -1,7 +1,7 @@
 import React from 'react'
 import * as motion from "motion/react-client"
 
-const DURATION = 0.25;
+const DURATION = 0.2;
 const STAGGER = 0;
 
 interface IFlipText {
@@ -18,13 +18,9 @@ const FlipText = ({ children, href, duration = DURATION, stagger = STAGGER, clas
             initial="initial"
             whileHover="hovered"
             href={href}
-            className={`relative block overflow-hidden whitespace-nowrap ${className}`}
-            style={{
-                lineHeight: 0.75,
-            }}
+            className={`relative block overflow-hidden ${className}`}
         >
-            <div>
-                {/* {children.split("").map((l, i) => ( */}
+            <div className="relative overflow-hidden w-full h-full flex items-center justify-center">
                 <motion.span
                     variants={{
                         initial: {
@@ -37,37 +33,33 @@ const FlipText = ({ children, href, duration = DURATION, stagger = STAGGER, clas
                     transition={{
                         duration: duration,
                         ease: "easeInOut",
-                        delay: stagger, //stagger * i
+                        delay: stagger,
                     }}
-                    className="inline-block"
-                // key={i}
+                    className="inline-block whitespace-nowrap"
                 >
-                    {children}{/* {l} */}
+                    {children}
                 </motion.span>
-                {/* ))} */}
-            </div>
-            <div className="absolute inset-0">
-                {/* {children.split("").map((l, i) => ( */}
-                <motion.span
-                    variants={{
-                        initial: {
-                            y: "100%",
-                        },
-                        hovered: {
-                            y: 0,
-                        },
-                    }}
-                    transition={{
-                        duration: duration,
-                        ease: "easeInOut",
-                        delay: stagger, //stagger*i
-                    }}
-                    className="inline-block"
-                // key={i}
-                >
-                    {children}{/* {l} */}
-                </motion.span>
-                {/* ))} */}
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <motion.span
+                        variants={{
+                            initial: {
+                                y: "100%",
+                            },
+                            hovered: {
+                                y: 0,
+                            },
+                        }}
+                        transition={{
+                            duration: duration,
+                            ease: "easeInOut",
+                            delay: stagger,
+                        }}
+                        className="inline-block whitespace-nowrap"
+                    >
+                        {children}
+                    </motion.span>
+                </div>
             </div>
         </motion.a>
     )

@@ -8,7 +8,7 @@ const WhatWeDo = () => {
                 <video src="/assets/1.mp4" autoPlay muted loop className='h-full' />
                 <div className='flex flex-col justify-center font-regular pl-36 pr-16 gap-16'>
                     <h1 className='text-3xl'>Cuberto is a leading digital product agency focused on branding, UI/UX design, mobile, and web development.</h1>
-                    <Button url='/services' className="border-1 border-black rounded-full w-fit py-20 px-32 text-3xl ">
+                    <Button url='/services' className="border-1 border-black rounded-full w-fit text-3xl" padding='px-20 py-16'>
                         What we do
                     </Button>
                 </div>

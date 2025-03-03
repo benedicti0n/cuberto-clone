@@ -47,7 +47,7 @@ const Socials = () => {
                     <TextAnimate className="text-white text-2xl">
                         Alexandria VA, 22314
                     </TextAnimate>
-                    <Button className='border-1 border-white rounded-4xl w-fit text-white uppercase p-4 text-2xl mt-8'>Info@cuberto.com</Button>
+                    <Button className='border-1 border-white rounded-4xl w-fit text-white text-2xl mt-8 hover:invert' padding='py-2 px-4 uppercase'>Info@cuberto.com</Button>
                 </div>
 
                 <div className="w-1/2 flex flex-col text-light-regular">
@@ -62,7 +62,7 @@ const Socials = () => {
                     <TextAnimate className="text-white text-2xl">
                         342/1, 11000 Prague
                     </TextAnimate>
-                    <Button className='border-1 border-white rounded-4xl w-fit text-white uppercase p-4 text-2xl mt-8'>+1 301 549 9309</Button>
+                    <Button className='border-1 border-white rounded-4xl w-fit text-white text-2xl mt-8 hover:invert' padding='py-2 px-4 uppercase'>+1 301 549 9309</Button>
                 </div>
             </div>
         </div>

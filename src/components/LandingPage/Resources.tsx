@@ -54,7 +54,7 @@ const Resources = () => {
                     <h1 className='text-xl font-regular text-white'>
                         We regularly release design courses, offer advice to newbie designers, walk you through creating awesome effects, and share source files.
                     </h1>
-                    <Button className='border-1 border-white w-fit uppercase text-white p-4 rounded-3xl text-xl'>
+                    <Button className='border-1 border-white w-fit text-white rounded-full text-2xl hover:invert' padding='py-2 px-4 uppercase'>
                         View all resources
                     </Button>
                 </div>
