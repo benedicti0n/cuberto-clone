@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextAnimate } from './magicui/text-animate'
+import { TextAnimate } from '../magicui/text-animate'
 import * as motion from "motion/react-client"
 
 const Landingpage = () => {
