@@ -1,7 +1,7 @@
 import React from 'react'
 import * as motion from "motion/react-client"
 
-const DURATION = 0.1;
+const DURATION = 0.25;
 const STAGGER = 0;
 
 interface IFlipText {
