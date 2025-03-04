@@ -15,6 +15,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <style>
+          {`
+                    ::selection {
+                        background-color: #494949; /* Change the highlight color to gray */
+                        color: white; /* Optional: Change the text color when selected */
+                    }
+                `}
+        </style>
         <SmoothScrolling>{children}</SmoothScrolling>
       </body>
     </html>
