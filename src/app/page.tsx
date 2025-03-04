@@ -16,6 +16,12 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const stickyElement = useRef<HTMLDivElement>(null);
 
+  // State for cursor behavior with videos
+  const [cursorState, setCursorState] = useState({
+    isHoveringOnVideo: false,
+    isVideoPlaying: false
+  });
+
   return (
     <div className="w-full min-h-screen">
       <NavHeader ref={stickyElement} onClick={() => setIsOpen((prev) => !prev)} />
@@ -23,12 +29,16 @@ export default function Home() {
       <Landingpage />
       <ShortPromo />
       <WhatWeDo />
-      <FeaturedProjects />
+      <FeaturedProjects setCursorState={setCursorState} />
       <OurPhilosophy />
       <Resources />
-      <UiProjectSection />
+      <UiProjectSection setCursorState={setCursorState} />
       <Socials />
-      <Cursor stickyElement={stickyElement} />
+      <Cursor
+        stickyElement={stickyElement}
+        isHoveringOnVideo={cursorState.isHoveringOnVideo}
+        isVideoPlaying={cursorState.isVideoPlaying}
+      />
     </div>
   );
 }

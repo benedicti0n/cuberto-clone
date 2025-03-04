@@ -42,7 +42,7 @@ const FeaturedProjects = () => {
                         <ProjectCard key={index} {...project} />
                     ))}
                 </div>
-                <div className='col-span-1 flex flex-col gap-24 mt-64'>
+                <div className='col-span-1 flex flex-col gap-24 mt-16 md:mt-64'>
                     {projects.filter((_, index) => index % 2 !== 0).map((project, index) => (
                         <ProjectCard key={index} {...project} />
                     ))}
