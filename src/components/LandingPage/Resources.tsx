@@ -46,7 +46,7 @@ const Resources = () => {
     return (
         <div className='min-h-screen bg-black/95 md:rounded-t-[5rem] relative -top-40'>
             {/* Animated Title */}
-            <div className='text-7xl md:text-9xl flex flex-col leading-16 md:leading-28 tracking-tighter text-white px-6 pt-20 pb-24 md:px-40 md:pt-56 md:pb-40'>
+            <div className='text-6xl md:text-9xl flex flex-col leading-16 md:leading-28 tracking-tighter text-white px-6 pt-20 pb-24 md:px-40 md:pt-56 md:pb-40'>
                 <TextAnimate by="word" animation='slideUp' className='font-regular top-0 relative'>
                     Development
                 </TextAnimate>

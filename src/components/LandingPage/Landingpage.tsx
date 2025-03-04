@@ -9,7 +9,7 @@ const Landingpage = () => {
                 <h1 className='text-3xl md:text-2xl font-semibold'>cuberto</h1>
                 <h1 className='font-light-regular text-base pr-13 md:block hidden'>menu</h1>
             </div>
-            <div className='h-full md:mx-40 md:my-20 mx-4 flex flex-col justify-center text-6xl md:text-8xl'>
+            <div className='h-full md:mx-40 md:my-20 mx-4 flex flex-col justify-center text-5xl sm:text-6xl md:text-8xl'>
                 <TextAnimate
                     animation="slideUp"
                     by="word"

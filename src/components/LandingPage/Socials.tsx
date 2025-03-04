@@ -34,7 +34,7 @@ const Socials = () => {
                 })}
             </div>
 
-            <div className="w-full mx-4 md:px-20 flex flex-col md:flex-row relative z-10 bg-black py-24">
+            <div className="mx-4 md:px-20 flex flex-col md:flex-row bg-black py-24">
                 <div className="w-full md:w-1/2 flex flex-col text-light-regular">
                     <div className='flex items-center gap-8 md:gap-4'>
                         <TextAnimate className="text-white text-lg md:text-xs items-center uppercase">
