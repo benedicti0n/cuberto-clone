@@ -4,7 +4,7 @@ import { TextAnimate } from '../ui/magicui/text-animate'
 const OurPhilosophy = () => {
     return (
         <div className='min-h-screen bg-white -top-20 relative md:rounded-t-[5rem] px-4 pt-20 md:px-40 md:pt-48 md:pb-64'>
-            <div className='text-7xl md:text-[9rem] flex flex-col leading-20 md:leading-30 tracking-tighter border-2 border-black'>
+            <div className='text-7xl md:text-[9rem] flex flex-col leading-20 md:leading-30 tracking-tighter'>
                 <TextAnimate by="word" animation='slideUp' className='font-regular top-0 relative'>
                     Our
                 </TextAnimate>
