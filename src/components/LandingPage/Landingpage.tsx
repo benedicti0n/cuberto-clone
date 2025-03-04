@@ -7,7 +7,7 @@ const Landingpage = () => {
         <div className='h-[75vh] md:h-[90vh] w-full flex flex-col relative'>
             <div className='flex justify-between items-center pt-6 w-full px-8 md:px-12'>
                 <h1 className='text-3xl md:text-2xl font-semibold'>cuberto</h1>
-                <h1 className='font-light-regular text-base pr-13 md:visible hidden'>menu</h1>
+                <h1 className='font-light-regular text-base pr-13 md:block hidden'>menu</h1>
             </div>
             <div className='h-full md:mx-40 md:my-20 mx-4 flex flex-col justify-center text-6xl md:text-8xl'>
                 <TextAnimate

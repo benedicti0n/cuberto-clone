@@ -79,7 +79,7 @@ const Resources = () => {
             </div>
 
             <div className='w-full md:py-40 border-white flex'>
-                <div className='w-full md:w-1/2 hidden md:visible'></div>
+                <div className='w-full md:w-1/2 md:block hidden'></div>
                 <div className='flex flex-col w-full md:w-1/2 gap-10 py-32 md:py-0 mx-6 md:pr-68'>
                     <h1 className='text-2xl md:text-xl font-regular text-white'>
                         We regularly release design courses, offer advice to newbie designers, walk you through creating awesome effects, and share source files.

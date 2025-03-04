@@ -14,7 +14,7 @@ const OurPhilosophy = () => {
             </div>
 
             <div className='flex items-center mt-20 md:mt-32'>
-                <video src="/assets/2.mp4" autoPlay muted loop className='w-1/2 hidden md:visible' />
+                <video src="/assets/2.mp4" autoPlay muted loop className='w-1/2 md:block hidden' />
                 <h1 className='px-2 md:pr-32 text-2xl md:text-xl font-regular leading-7 md:leading-6'>
                     In our team, developers work alongside designers, strategists and analysts. Cuberto doesn&apos;t do cookie-cutter solutions and we build products exactly as they were during the design phase, no short cuts or simplifications. <br />
                     <br />
