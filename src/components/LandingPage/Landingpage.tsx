@@ -4,7 +4,7 @@ import * as motion from "motion/react-client"
 
 const Landingpage = () => {
     return (
-        <div className='h-[90vh] w-full border-2 flex flex-col relative'>
+        <div className='h-[90vh] w-full flex flex-col relative'>
             <div className='flex justify-between items-center pt-6 w-full px-12'>
                 <h1 className='text-2xl'>cuberto</h1>
                 <h1 className='font-light-regular text-base pr-13'>menu</h1>

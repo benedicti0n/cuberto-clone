@@ -4,7 +4,7 @@ import * as motion from "motion/react-client"
 import { useMotionValue, useSpring, transform, animate } from 'motion/react'
 
 interface CursorProps {
-    stickyElement?: React.RefObject<HTMLDivElement>;
+    stickyElement?: React.RefObject<HTMLDivElement> | null;
     isHoveringOnVideo?: boolean;
     isVideoPlaying?: boolean;
 }
