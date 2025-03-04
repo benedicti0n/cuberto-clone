@@ -12,7 +12,6 @@ interface CursorProps {
 const Cursor: React.FC<CursorProps> = ({
     stickyElement,
     isHoveringOnVideo = false,
-    isVideoPlaying = false
 }) => {
     const [isHovered, setIsHovered] = useState(false)
     const cursorRef = useRef(null)
@@ -36,7 +35,7 @@ const Cursor: React.FC<CursorProps> = ({
         y: useMotionValue(1)
     }
 
-    const rotate = (distance) => {
+    const rotate = (distance: { x: number; y: number }) => {
         const angle = Math.atan2(distance.y, distance.x)
         animate(cursorRef.current, { rotate: `${angle}rad` }, { duration: 0 })
     }
@@ -95,7 +94,7 @@ const Cursor: React.FC<CursorProps> = ({
         }
     }, [isHovered, stickyElement])
 
-    const template = ({ rotate, scaleX, scaleY }) => {
+    const template = ({ rotate, scaleX, scaleY }: { rotate: string; scaleX: number; scaleY: number }) => {
         return `rotate(${rotate}) scaleX(${scaleX}) scaleY(${scaleY})`
     }
 
