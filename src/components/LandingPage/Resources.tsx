@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react'
-import { TextAnimate } from '../magicui/text-animate'
+import { TextAnimate } from '../ui/magicui/text-animate'
 import { CardLink } from '../ui/CardLink'
 import * as motion from "motion/react-client"
 import Button from '../ui/Button'

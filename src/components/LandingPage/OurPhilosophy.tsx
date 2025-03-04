@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextAnimate } from '../magicui/text-animate'
+import { TextAnimate } from '../ui/magicui/text-animate'
 
 const OurPhilosophy = () => {
     return (

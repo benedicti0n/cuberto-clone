@@ -1,6 +1,6 @@
 import React from 'react'
 import { Spinner } from './kibo-ui/spinner'
-import { SpinningText } from '../magicui/spinning-text'
+import { SpinningText } from './magicui/spinning-text'
 
 const CircularPing = () => {
     return (

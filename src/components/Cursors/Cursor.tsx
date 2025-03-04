@@ -63,8 +63,7 @@ const Cursor: React.FC<CursorProps> = ({ stickyElement, isHoveringOnVideo, isVid
     }
 
     if (isHoveringOnVideo) {
-        mousePosition.x.set((mousePosition.x - cursorSize / 2));
-        mousePosition.y.set((mousePosition.y - cursorSize / 2));
+
     }
 
     const manageMouseOver = () => { setIsHovered(true) }

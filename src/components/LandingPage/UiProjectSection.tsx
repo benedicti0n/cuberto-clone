@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react'
-import { VelocityScroll } from '../magicui/scroll-based-velocity'
+import { VelocityScroll } from '../ui/magicui/scroll-based-velocity'
 import { CardLink1 } from '../ui/CardLink'
 import { motion } from 'framer-motion'  // Changed to match CardLink import
 import { Dribbble } from 'lucide-react'
@@ -59,7 +59,7 @@ const UiProjectSection = () => {
 
             <div className='overflow-hidden pt-40 w-full' ref={containerRef}>
                 <motion.div
-                    className="flex gap-6 cursor-grab active:cursor-grabbing pl-40"
+                    className="flex gap-6 cursor-grab active:cursor-grabbing pl-20"
                     drag="x"
                     transition={{ stiffness: 30, damping: 30, ease: "easeInOut" }}
                     dragConstraints={dragConstraints}

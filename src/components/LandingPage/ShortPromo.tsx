@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
-import VideoCursor from '../Cursors/VideoCursor';
 import { motion, AnimatePresence } from 'framer-motion';
-import Cursor from '../Cursors/Cursor';
+
 
 const ShortPromo = () => {
     const [isHoveringOnVideo, setIsHoveringOnVideo] = useState(false);

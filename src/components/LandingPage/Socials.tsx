@@ -1,9 +1,9 @@
 import React from 'react'
-import { VelocityScroll } from '../magicui/scroll-based-velocity'
+import { VelocityScroll } from '../ui/magicui/scroll-based-velocity'
 import CircularPing from '../ui/CircularPing'
 import { ArrowUpRight } from 'lucide-react'
 import SocialLinkRibbon from './SocialLinkRibbon'
-import { TextAnimate } from '../magicui/text-animate'
+import { TextAnimate } from '../ui/magicui/text-animate'
 import Button from '../ui/Button'
 
 const socials = [

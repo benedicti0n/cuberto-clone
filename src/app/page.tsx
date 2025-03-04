@@ -26,7 +26,7 @@ export default function Home() {
       <Resources />
       <UiProjectSection />
       <Socials />
-      {/* <Cursor stickyElement={stickyElement} /> */}
+      <Cursor stickyElement={stickyElement} />
     </div>
   );
 }

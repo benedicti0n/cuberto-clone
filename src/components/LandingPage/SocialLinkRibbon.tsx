@@ -1,6 +1,6 @@
 "use client";
 import React, { ReactNode, useState } from "react";
-import { VelocityScroll } from "../magicui/scroll-based-velocity";
+import { VelocityScroll } from "../ui/magicui/scroll-based-velocity";
 import { motion } from "framer-motion";
 import { redirect } from "next/navigation";
 
