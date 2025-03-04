@@ -44,9 +44,9 @@ const Resources = () => {
     }, [cards]); // Recalculate when cards array changes
 
     return (
-        <div className='min-h-screen bg-black/90 rounded-t-[5rem] relative -top-40'>
+        <div className='min-h-screen bg-black/95 md:rounded-t-[5rem] relative -top-40'>
             {/* Animated Title */}
-            <div className='text-9xl flex flex-col leading-28 tracking-tighter text-white px-40 pt-56 pb-40'>
+            <div className='text-7xl md:text-9xl flex flex-col leading-16 md:leading-28 tracking-tighter text-white px-6 pt-20 pb-24 md:px-40 md:pt-56 md:pb-40'>
                 <TextAnimate by="word" animation='slideUp' className='font-regular top-0 relative'>
                     Development
                 </TextAnimate>
@@ -61,7 +61,7 @@ const Resources = () => {
             {/* Draggable Cards Section */}
             <div className='overflow-hidden' ref={containerRef}>
                 <motion.div
-                    className="flex gap-10 cursor-grab active:cursor-grabbing pl-40"
+                    className="flex gap-4 md:gap-10 cursor-grab active:cursor-grabbing pl-6 md:pl-40"
                     drag="x"
                     transition={{ stiffness: 30, damping: 30, ease: "easeInOut" }}
                     dragConstraints={dragConstraints}
@@ -78,13 +78,13 @@ const Resources = () => {
                 </motion.div>
             </div>
 
-            <div className='w-full py-40 border-white flex'>
-                <div className='w-1/2'></div>
-                <div className='flex flex-col w-1/2 gap-10 pr-68'>
-                    <h1 className='text-xl font-regular text-white'>
+            <div className='w-full md:py-40 border-white flex'>
+                <div className='w-full md:w-1/2 hidden md:visible'></div>
+                <div className='flex flex-col w-full md:w-1/2 gap-10 py-32 md:py-0 mx-6 md:pr-68'>
+                    <h1 className='text-2xl md:text-xl font-regular text-white'>
                         We regularly release design courses, offer advice to newbie designers, walk you through creating awesome effects, and share source files.
                     </h1>
-                    <Button className='border-1 border-white w-fit text-white rounded-full text-2xl hover:invert' padding='py-2 px-4 uppercase'>
+                    <Button className='border-1 border-white w-fit text-white rounded-full text-lg md:text-2xl hover:invert' padding='py-2 px-6 md:px-4 uppercase'>
                         View all resources
                     </Button>
                 </div>

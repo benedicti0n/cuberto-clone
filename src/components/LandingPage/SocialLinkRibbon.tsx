@@ -2,7 +2,6 @@
 import React, { ReactNode, useState } from "react";
 import { VelocityScroll } from "../ui/magicui/scroll-based-velocity";
 import { motion } from "framer-motion";
-import { redirect } from "next/navigation";
 
 interface ILinkRibbon {
     platform: string;
@@ -18,9 +17,8 @@ const SocialLinkRibbon = ({ platform, link, icon }: ILinkRibbon) => {
             className="w-full border-y border-white/20 relative overflow-hidden"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            onClick={() => redirect(`${link}`)}
         >
-            <div className="w-full h-full flex justify-between items-center px-20 py-8 font-regular text-3xl text-white relative z-10">
+            <div className="w-full h-full flex justify-between items-center px-6 md:px-20 py-8 font-regular text-xl md:text-3xl text-white relative z-10">
                 <h1 className="w-full text-left">{platform}</h1>
                 <div className="w-full flex justify-end">{icon}</div>
             </div>

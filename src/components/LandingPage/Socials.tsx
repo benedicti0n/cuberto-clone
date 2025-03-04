@@ -18,14 +18,14 @@ const socials = [
 
 const Socials = () => {
     return (
-        <div className='w-full min-h-screen bg-black pt-32'>
+        <div className='w-full min-h-screen bg-black pt-20 md:pt-32'>
             <VelocityScroll numRows={1} defaultVelocity={100}>
-                <h1 className='text-[12rem] text-white font-regular px-10 tracking-tighter'>Follow Us</h1>
+                <h1 className='text-8xl md:text-[12rem] text-white font-regular px-10 tracking-tighter'>Follow Us</h1>
                 <CircularPing />
             </VelocityScroll>
 
             <div className='w-full'>
-                <h1 className='uppercase text-sm text-white font-light-regular px-20 py-12 border-b-1 border-white/20'>Social media and contacts</h1>
+                <h1 className='uppercase text-lg md:text-sm text-white font-light-regular px-6 md:px-20 pt-16 pb-8 md:py-12 border-b-1 border-white/20'>Social media and contacts</h1>
 
                 {socials.map((social) => {
                     return (
@@ -34,35 +34,35 @@ const Socials = () => {
                 })}
             </div>
 
-            <div className="w-full px-20 flex relative z-10 bg-black py-24">
-                <div className="w-1/2 flex flex-col text-light-regular">
-                    <div className='flex items-center gap-4'>
-                        <TextAnimate className="text-white text-xs items-center uppercase">
+            <div className="w-full mx-4 md:px-20 flex flex-col md:flex-row relative z-10 bg-black py-24">
+                <div className="w-full md:w-1/2 flex flex-col text-light-regular">
+                    <div className='flex items-center gap-8 md:gap-4'>
+                        <TextAnimate className="text-white text-lg md:text-xs items-center uppercase">
                             Main Office
                         </TextAnimate>
-                        <TextAnimate className="text-white text-2xl">
+                        <TextAnimate className="text-white text-3xl md:text-2xl">
                             901 N Pitt Street
                         </TextAnimate>
                     </div>
-                    <TextAnimate className="text-white text-2xl">
+                    <TextAnimate className="text-white text-3xl md:text-2xl">
                         Alexandria VA, 22314
                     </TextAnimate>
-                    <Button className='border-1 border-white rounded-4xl w-fit text-white text-2xl mt-8 hover:invert' padding='py-2 px-4 uppercase'>Info@cuberto.com</Button>
+                    <Button className='border-1 border-white rounded-4xl w-fit text-white font-light-regular text-3xl md:text-2xl mt-8 hover:invert' padding='pt-4 pb-2 md:py-2 px-6 md:px-4 uppercase'>Info@cuberto.com</Button>
                 </div>
 
-                <div className="w-1/2 flex flex-col text-light-regular">
-                    <div className='flex items-center gap-4'>
-                        <TextAnimate className="text-white text-xs items-center uppercase">
+                <div className="w-full md:w-1/2 flex flex-col text-light-regular py-32 md:py-0">
+                    <div className='flex items-center gap-8 md:gap-4'>
+                        <TextAnimate className="text-white text-lg md:text-xs items-center uppercase">
                             Second Office
                         </TextAnimate>
-                        <TextAnimate className="text-white text-2xl">
+                        <TextAnimate className="text-white text-3xl md:text-2xl">
                             901 N Pitt Street
                         </TextAnimate>
                     </div>
-                    <TextAnimate className="text-white text-2xl">
+                    <TextAnimate className="text-white text-3xl md:text-2xl">
                         342/1, 11000 Prague
                     </TextAnimate>
-                    <Button className='border-1 border-white rounded-4xl w-fit text-white text-2xl mt-8 hover:invert' padding='py-2 px-4 uppercase'>+1 301 549 9309</Button>
+                    <Button className='border-1 border-white rounded-4xl w-fit text-white font-light-regular text-2xl mt-8 hover:invert' padding='pt-4 pb-2 md:py-2 px-6 md:px-4 uppercase'>+1 301 549 9309</Button>
                 </div>
             </div>
         </div>

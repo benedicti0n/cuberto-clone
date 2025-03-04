@@ -5,12 +5,12 @@ import { motion } from 'framer-motion'  // Changed to match CardLink import
 import { Dribbble } from 'lucide-react'
 
 const cards = [
-    { imageUrl: "/assets/cover.png", href: '/image', title: "Cuberto", icon: <Dribbble className='h-4' /> },
-    { imageUrl: "/assets/cover.png", href: '/image', title: "Cuberto", icon: <Dribbble className='h-4' /> },
-    { imageUrl: "/assets/cover.png", href: '/image', title: "Cuberto", icon: <Dribbble className='h-4' /> },
-    { imageUrl: "/assets/cover.png", href: '/image', title: "Cuberto", icon: <Dribbble className='h-4' /> },
-    { imageUrl: "/assets/cover.png", href: '/image', title: "Cuberto", icon: <Dribbble className='h-4' /> },
-    { imageUrl: "/assets/cover.png", href: '/image', title: "Cuberto", icon: <Dribbble className='h-4' /> },
+    { imageUrl: "/assets/cover.png", href: '/image', title: "Cuberto", icon: <Dribbble className='h-6 md:h-4' /> },
+    { imageUrl: "/assets/cover.png", href: '/image', title: "Cuberto", icon: <Dribbble className='h-6 md:h-4' /> },
+    { imageUrl: "/assets/cover.png", href: '/image', title: "Cuberto", icon: <Dribbble className='h-6 md:h-4' /> },
+    { imageUrl: "/assets/cover.png", href: '/image', title: "Cuberto", icon: <Dribbble className='h-6 md:h-4' /> },
+    { imageUrl: "/assets/cover.png", href: '/image', title: "Cuberto", icon: <Dribbble className='h-6 md:h-4' /> },
+    { imageUrl: "/assets/cover.png", href: '/image', title: "Cuberto", icon: <Dribbble className='h-6 md:h-4' /> },
 ]
 
 const UiProjectSection = () => {
@@ -44,22 +44,22 @@ const UiProjectSection = () => {
     }, [cards]); // 
 
     return (
-        <div className='relative flex w-full flex-col items-center justify-center overflow-hidden -top-20 mb-20'>
+        <div className='relative flex w-full flex-col items-center justify-center overflow-hidden -top-20 md:mb-20'>
             <VelocityScroll numRows={1} defaultVelocity={100}>
-                <h1 className="text-[12rem] font-regular ml-64">New Day -</h1>
-                <h1 className="text-[12rem] font-light-italic">New Inspo</h1>
+                <h1 className="text-[8rem] md:text-[12rem] font-regular ml-48 md:ml-64">New Day -</h1>
+                <h1 className="text-[8rem] md:text-[12rem] font-light-italic">New Inspo</h1>
                 <video
                     src="/assets/header3.mp4"
                     autoPlay
                     muted
                     loop
-                    className="rounded-full h-40"
+                    className="rounded-full h-32 md:h-40"
                 />
             </VelocityScroll>
 
             <div className='overflow-hidden pt-40 w-full' ref={containerRef}>
                 <motion.div
-                    className="flex gap-6 cursor-grab active:cursor-grabbing pl-20"
+                    className="flex gap-3 md:gap-6 cursor-grab active:cursor-grabbing pl-6 md:pl-20"
                     drag="x"
                     transition={{ stiffness: 30, damping: 30, ease: "easeInOut" }}
                     dragConstraints={dragConstraints}

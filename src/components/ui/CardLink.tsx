@@ -10,7 +10,7 @@ interface ICardLink {
 
 export const CardLink = ({ imageUrl, href, title, icon }: ICardLink) => {
     return (
-        <div className='flex flex-col gap-6 aspect-video w-120 rounded-4xl'>
+        <div className='flex flex-col gap-6 aspect-video w-108 md:w-120 rounded-4xl'>
             <motion.div
                 className='flex flex-col gap-6'
                 whileHover={{ scale: 0.98 }}
@@ -19,17 +19,17 @@ export const CardLink = ({ imageUrl, href, title, icon }: ICardLink) => {
                 <img
                     src={`${imageUrl}`}
                     alt={`${imageUrl}`}
-                    className='rounded-3xl object-cover'
+                    className='rounded-4xl md:rounded-3xl object-cover'
                 />
             </motion.div>
-            <h1 className=' font-light-regular text-lg text-white'>{icon} {title}</h1>
+            <h1 className=' font-light-regular text-xl md:text-lg text-white'>{icon} {title}</h1>
         </div>
     )
 }
 
 export const CardLink1 = ({ imageUrl, href, title, icon }: ICardLink) => {
     return (
-        <div className='flex flex-col gap-4 w-76'>
+        <div className='flex flex-col gap-4 w-80 md:w-76'>
             <motion.div
                 className='flex flex-col'
                 whileHover={{ scale: 0.98 }}
@@ -38,10 +38,10 @@ export const CardLink1 = ({ imageUrl, href, title, icon }: ICardLink) => {
                 <img
                     src={`${imageUrl}`}
                     alt={`${imageUrl}`}
-                    className='rounded-2xl object-cover w-76 h-56'
+                    className='rounded-3xl md:rounded-2xl object-cover w-80 md:w-76 h-60 md:h-56'
                 />
             </motion.div>
-            <h1 className='flex items-center font-light-regular text-sm'>{icon} {title}</h1>
+            <h1 className='flex items-center gap-2 md:gap-0 font-light-regular text-lg md:text-sm'>{icon} {title}</h1>
         </div>
     )
 }

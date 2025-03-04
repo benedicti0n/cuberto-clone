@@ -19,8 +19,8 @@ const projects = [
 
 const FeaturedProjects = () => {
     return (
-        <div className='min-h-screen bg-black/90 rounded-t-[5rem] px-40 pt-32 pb-64'>
-            <h1 className='text-white font-regular text-9xl'>Featured</h1>
+        <div className='min-h-screen bg-black/90 md:rounded-t-[5rem] px-4 pt-20 pb-56 md:px-40 md:pt-32 md:pb-64'>
+            <h1 className='text-white font-regular text-7xl md:text-9xl'>Featured</h1>
             <div className='flex items-center mt-2 gap-4'>
                 <motion.div
                     initial={{ opacity: 0, scale: 0 }}
@@ -30,14 +30,14 @@ const FeaturedProjects = () => {
                         scale: { type: "spring", bounce: 0 },
                     }}
                 >
-                    <video src="/assets/header2.mp4" autoPlay muted loop className='rounded-full h-32' />
+                    <video src="/assets/header2.mp4" autoPlay muted loop className='rounded-full h-20 md:h-32' />
                 </motion.div>
-                <h1 className='text-9xl font-light-italic text-white'>projects</h1>
+                <h1 className='text-7xl md:text-9xl font-light-italic text-white'>projects</h1>
             </div>
 
             {/* Grid for Projects */}
-            <div className='h-full w-8/10 mt-48 grid grid-cols-2 gap-16'>
-                <div className='col-span-1 flex flex-col gap-24'>
+            <div className='h-full w-full md:w-8/10 mt-16 md:mt-48 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16'>
+                <div className='col-span-1 flex flex-col gap-16 md:gap-24'>
                     {projects.filter((_, index) => index % 2 === 0).map((project, index) => (
                         <ProjectCard key={index} {...project} />
                     ))}
