@@ -96,7 +96,7 @@ const Cursor: React.FC<CursorProps> = ({ stickyElement, isHoveringOnVideo, isVid
         <motion.div
             ref={cursorRef}
             transformTemplate={template}
-            className='w-2 h-2 fixed rounded-full mix-blend-difference bg-white'
+            className='w-2 h-2 fixed z-40 rounded-full mix-blend-difference bg-white'
             style={{ left: smoothMouse.x, top: smoothMouse.y, scaleX: scale.x, scaleY: scale.y }}
             animate={{ width: cursorSize, height: cursorSize }}
         >

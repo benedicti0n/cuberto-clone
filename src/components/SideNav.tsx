@@ -18,7 +18,7 @@ const SideNav = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
 
             {isOpen && (
                 <h1
-                    className='text-2xl px-12 pt-6 fixed text-white z-20 duration-1000 transition-all ease-in-out'
+                    className='text-3xl md:text-2xl px-7 md:px-12 pt-7 md:pt-6 fixed text-black md:text-white font-semibold z-60 duration-1000 transition-all ease-in-out'
                     style={{ opacity: isOpen ? 1 : 0 }}
                 >
                     cuberto
@@ -30,11 +30,11 @@ const SideNav = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
                 initial={{ x: "100%" }}
                 animate={{ x: isOpen ? "0%" : "100%" }}
                 transition={{ type: "tween", duration: 0.6, ease: "easeInOut" }}
-                className="fixed top-0 right-0 h-full w-1/2 bg-white text-black shadow-lg flex flex-col items-center justify-center gap-6 z-40 transition-opacity duration-700"
+                className="fixed top-0 right-0 h-full md:w-1/2 w-full bg-white text-black shadow-lg flex flex-col items-center justify-center gap-6 z-40 transition-opacity duration-700"
             >
-                <div className="px-20 pt-36 pb-16 w-full h-full flex flex-col">
+                <div className="md:px-20 md:pt-36 md:pb-16 px-12 pt-56 pb-24 w-full h-full flex flex-col">
                     <motion.div className="flex transition-opacity duration-700" transition={{ type: "", duration: 0.6, ease: "easeInOut" }}>
-                        <div className="flex flex-col h-full w-1/2">
+                        <div className="flex flex-col h-full w-1/2 md:visible hidden">
                             <h1 className="text-xs text-black/30 font-light-regular pb-12">Social media</h1>
                             <div className="text-sm font-light-regular flex flex-col">
                                 {socialLinks.map((link, index) => (
@@ -50,7 +50,7 @@ const SideNav = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
                             </div>
                         </div>
                         <div className="flex flex-col h-full w-1/2">
-                            <h1 className="text-xs text-black/30 font-light-regular pb-12">Menu</h1>
+                            <h1 className="text-lg md:text-xs text-black/30 font-light-regular pb-8 md:pb-12">Menu</h1>
                             <div className="text-5xl font-light-regular flex flex-col tracking-tighter">
                                 {menuItems.map((item, index) => (
                                     <motion.div
@@ -59,15 +59,15 @@ const SideNav = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
                                         animate={{ opacity: isOpen ? 1 : 0 }}
                                         transition={{ duration: 0.6, delay: index * 0.1 }}
                                     >
-                                        <FlipText className="pb-4 w-fit">{item}</FlipText>
+                                        <FlipText className="pb-6 md:pb-4 w-fit">{item}</FlipText>
                                     </motion.div>
                                 ))}
                             </div>
                         </div>
                     </motion.div>
                     <div className="flex flex-col h-full justify-end">
-                        <h1 className="text-xs text-black/30 font-light-regular pb-4">Get in touch</h1>
-                        <div className="flex">
+                        <h1 className="text-xl md:text-xs text-black/30 font-light-regular pb-4">Get in touch</h1>
+                        <div className="flex text-xl md:text-base">
                             <UnderLineText className="w-1/2">info@cuerto.com</UnderLineText>
                             <UnderLineText>Our workflow</UnderLineText>
                         </div>
