@@ -34,7 +34,7 @@ const SideNav = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
             >
                 <div className="md:px-20 md:pt-36 md:pb-16 px-12 pt-56 pb-24 w-full h-full flex flex-col">
                     <motion.div className="flex transition-opacity duration-700" transition={{ type: "", duration: 0.6, ease: "easeInOut" }}>
-                        <div className="flex flex-col h-full w-1/2 md:visible hidden">
+                        <div className="flex flex-col h-full w-1/2 md:visible block">
                             <h1 className="text-xs text-black/30 font-light-regular pb-12">Social media</h1>
                             <div className="text-sm font-light-regular flex flex-col">
                                 {socialLinks.map((link, index) => (
