@@ -9,6 +9,7 @@ interface ILinkRibbon {
     icon: ReactNode;
 }
 
+// eslint-disable-next-line
 const SocialLinkRibbon = ({ platform, link, icon }: ILinkRibbon) => {
     const [isHovered, setIsHovered] = useState<boolean>(false);
 

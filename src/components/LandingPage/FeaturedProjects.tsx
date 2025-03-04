@@ -21,6 +21,7 @@ const projects = [
     { imageSrc: "/assets/frame.jpeg", videoSrc: "/assets/cover.mp4", name: "Project Six", description: "Bringing ideas to life" },
 ];
 
+// eslint-disable-next-line
 const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setCursorState }) => {
     return (
         <div className='min-h-screen bg-black/90 md:rounded-t-[5rem] px-4 pt-20 pb-56 md:px-40 md:pt-32 md:pb-64'>

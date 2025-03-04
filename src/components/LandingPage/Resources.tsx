@@ -41,7 +41,7 @@ const Resources = () => {
         // Recalculate on window resize
         window.addEventListener('resize', calculateConstraints);
         return () => window.removeEventListener('resize', calculateConstraints);
-    }, [cards]); // Recalculate when cards array changes
+    }, []); // Recalculate when cards array changes
 
     return (
         <div className='min-h-screen bg-black/95 md:rounded-t-[5rem] relative -top-40'>

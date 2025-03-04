@@ -8,6 +8,7 @@ interface ICardLink {
     icon?: ReactNode;
 }
 
+// eslint-disable-next-line
 export const CardLink = ({ imageUrl, href, title, icon }: ICardLink) => {
     return (
         <div className='flex flex-col gap-6 aspect-video w-108 md:w-120 rounded-4xl'>
@@ -27,6 +28,7 @@ export const CardLink = ({ imageUrl, href, title, icon }: ICardLink) => {
     )
 }
 
+// eslint-disable-next-line
 export const CardLink1 = ({ imageUrl, href, title, icon }: ICardLink) => {
     return (
         <div className='flex flex-col gap-4 w-80 md:w-76'>

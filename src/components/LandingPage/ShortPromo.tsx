@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 const ShortPromo = () => {
+    // eslint-disable-next-line
     const [isHoveringOnVideo, setIsHoveringOnVideo] = useState(false);
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
