@@ -3,9 +3,6 @@ import * as motion from "motion/react-client"
 
 import ProjectCard from '../ui/ProjectCard'
 
-interface FeaturedProjectsProps {
-    setCursorState: React.Dispatch<React.SetStateAction<{ isHoveringOnVideo: boolean; isVideoPlaying: boolean; }>>;
-}
 
 const projects = [
     { imageSrc: "/assets/frame.jpeg", videoSrc: "/assets/cover.mp4", name: "Punto Pago", description: "The First Super-App in Latin America" },
@@ -21,8 +18,7 @@ const projects = [
     { imageSrc: "/assets/frame.jpeg", videoSrc: "/assets/cover.mp4", name: "Project Six", description: "Bringing ideas to life" },
 ];
 
-// eslint-disable-next-line
-const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ setCursorState }) => {
+const FeaturedProjects = () => {
     return (
         <div className='min-h-screen bg-black/90 md:rounded-t-[5rem] px-4 pt-20 pb-56 md:px-40 md:pt-32 md:pb-64'>
             <h1 className='text-white font-regular text-7xl md:text-9xl'>Featured</h1>

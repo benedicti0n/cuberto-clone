@@ -12,14 +12,6 @@ const ShortPromo = () => {
     const handleClick = () => {
         setIsVideoPlaying(!isVideoPlaying);
         setIsModalOpen(!isModalOpen);
-
-        if (videoRef.current) {
-            if (!isVideoPlaying) {
-                videoRef.current.play();
-            } else {
-                videoRef.current.pause();
-            }
-        }
     };
 
     return (
@@ -45,15 +37,15 @@ const ShortPromo = () => {
             <AnimatePresence>
                 {isModalOpen && (
                     <motion.div
-                        initial={{ y: "-100%" }}
+                        initial={{ y: "100%" }}
                         animate={{ y: 0 }}
-                        exit={{ y: "100%" }}
+                        exit={{ y: "-100%" }}
                         transition={{
-                            type: "tween",
-                            duration: 0.6,
-                            ease: [0.45, 0, 0.55, 1]
+                            type: "spring",
+                            duration: 1,
+                            ease: "easeInOut"
                         }}
-                        className="fixed inset-0 bg-black z-50 cursor-none"
+                        className="fixed inset-0 z-50"
                         onClick={handleClick}
                     >
                         <video

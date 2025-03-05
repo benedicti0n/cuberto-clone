@@ -29,7 +29,7 @@ export default function Home() {
       <Landingpage />
       <ShortPromo />
       <WhatWeDo />
-      <FeaturedProjects setCursorState={setCursorState} />
+      <FeaturedProjects />
       <OurPhilosophy />
       <Resources />
       <UiProjectSection setCursorState={setCursorState} />
